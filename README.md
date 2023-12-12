@@ -18,6 +18,8 @@ get_world_biases.py - calculates the average non-Toronto user bias score for eac
 
 get_world_infos.py - calculates the average non-Toronto user misinformation score for each day in 2022, and writes them to the file world_info_scores.csv
 
+get_domain_rankings/domain_scrape.py + get_domain_rankings/generate_full_domain_list.py - use these files to scape mediabiasfactchack.com to get the trustworthiness and bias ratings for each domain in the dataset.
+
 **To generate a regression result:**
 
-Go to the "generate_figures" and go to the regression you would like to generate. Run the "toronto_domain_list.py" file, this will generate a file containing all interactions of each Toronto user for each day. The run "generate_regression.py" in order to generate the regression CSV file, which can then be put into R or some other software to run the regression.
+Go to the "generate_figures" and go to the regression you would like to generate. Run the "toronto_domain_list.py" file, this will generate a file containing all interactions of each Toronto user for each day for the user bias group relevent to the regression. The run "generate_regression.py" in order to generate the regression CSV file, which can then be put into R or some other software to run the regression. In the folder for each regression, the final regression csv has already been generated, so you can go in and see all the rows. A full report on each regression is also included in regression_results.txt.
